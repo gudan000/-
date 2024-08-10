@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2 class="title">车贷计算器</h2>
+        <form id="loan-form">
+            <div class="form-group">
+                <label for="loanAmount">贷款金额（元）</label>
+                <input type="number" id="loanAmount" value="10000">
+            </div>
+            <div class="form-group">
+                <label for="loanTerm">贷款期限（年）</label>
+                <select id="loanTerm">
+                    <option value="1">1年</option>
+                    <option value="2">2年</option>
+                    <option value="3">3年</option>
+                    <option value="4">4年</option>
+                    <option value="5">5年</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="annualInterestRate">年利率（%）</label>
+                <input type="number" id="annualInterestRate" value="13.12">
+            </div>
+            <button type="button" id="calculate-btn">计算</button>
+        </form>
+        <div class="results">
+            <p>月供（元）：<span id="monthlyPayment"></span></p>
+            <p>总利息（元）：<span id="totalInterest"></span></p>
+            <p>总偿还金额（元）：<span id="totalRepayment"></span></p>
+            <p>月利率（%）：<span id="monthlyInterestRate"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
